@@ -1,0 +1,285 @@
+  /* Jai Maa Kaali */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui;
+    cursor: none;
+}
+
+html, body {
+     height: 100vh;
+     width: 100%;
+     background: rgb(17, 20, 34);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     overflow: hidden;
+
+}
+
+.cursor {
+    pointer-events: none;
+    position: fixed;
+    display: block;
+    border-radius: 0;
+    mix-blend-mode: difference;
+    top: 0;
+    left: 0;
+    z-index: 9999999999999999;  
+  }
+
+
+  
+  .circle {
+      position: absolute;
+      display: block;
+      width: 26px;
+      height: 26px;
+      border-radius: 20px;
+      background: #fff;
+      /* box-shadow: 0px 0px 20px white; */
+  }
+  
+
+.circles {
+    position: absolute;
+}
+
+#c1 {
+    bottom: 15px;
+    right: 30%;
+    height: 200px;
+    width: 200px;
+    background: linear-gradient(45deg, rgb(255, 0, 72), orange);
+    border-radius: 50%;
+    animation: animate 2s ease-in-out infinite;
+    animation-delay: -1s;
+}
+#c1:after {
+    content: "";
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    background: linear-gradient(45deg, rgb(255, 0, 72), orange);
+    filter: blur(30px);
+    border-radius: 50%;
+}
+
+#c2 {
+    height: 250px;
+    width: 250px;
+    top: 10px;
+    left: 30%;
+    background: linear-gradient(45deg,rgb(255, 0, 191), royalblue);
+    border-radius: 50%;
+    animation: animate 2s ease-in-out infinite;
+}
+
+#c2::after {
+    position: absolute;
+    content: "";
+    height: 250px;
+    width: 250px;
+    background: linear-gradient(45deg,rgb(255, 0, 191), royalblue);
+    filter: blur(30px);
+    border-radius: 50%;
+}
+
+h1 {
+    font-size: 2.7rem;
+}
+
+.error {
+    margin-top: 8px;
+    margin-bottom: 17px;
+    color: #ff4949;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.logindiv {
+    position: relative;
+    padding: 2rem;
+    width: 23rem;
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.06);
+	-webkit-backdrop-filter: blur(15px);
+	backdrop-filter: blur(15px);
+	-webkit-box-shadow: 0 25px 23px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 25px 23px rgba(0, 0, 0, 0.15);
+	border: 1.5px solid rgba(255, 255, 255, 0.06);
+}
+
+.logindiv::after{
+    content: '';
+    position: absolute;
+    bottom: -3.5rem;
+    z-index: 5;
+    height: 100px;
+    width: 100px;
+    background: rgba(255, 255, 255, 0.06);
+    -webkit-backdrop-filter: blur(15px);
+	backdrop-filter: blur(15px);
+	-webkit-box-shadow: 0 25px 23px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 25px 23px rgba(0, 0, 0, 0.15);
+	border: 1.5px solid rgba(255, 255, 255, 0.06);
+    border-radius: 10px;
+    animation: animate 2s ease-in-out infinite;
+    animation-delay: -1s;
+}
+
+.logindiv::before{
+    content: '';
+    position: absolute;
+    top: -4rem;
+    right: 2rem;
+    height: 100px;
+    width: 100px;
+    background: rgba(255, 255, 255, 0.06);
+    -webkit-backdrop-filter: blur(15px);
+	backdrop-filter: blur(15px);
+	-webkit-box-shadow: 0 25px 23px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 25px 23px rgba(0, 0, 0, 0.15);
+	border: 1.5px solid rgba(255, 255, 255, 0.06);
+    border-radius: 10px;
+    animation: animate 2s ease-in-out infinite;
+}
+
+
+@keyframes animate
+{
+  0%, 100%
+  {
+    transform: translateY(10px);
+  }
+  
+  50%
+  {
+    transform: translate(-10px);
+  }
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+input {
+    height: 40px;
+    width: 100%;
+    outline: none;
+    font-size: 17px;
+    font-weight: 400;
+    padding-left: 1rem;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 5px;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-bottom-width: 2px;
+    color: white;
+}
+
+input::placeholder {
+    color: rgba(255,255,255,0.5);
+}
+
+input:focus{
+    border-color: rgb(27, 122, 255);
+    /* box-shadow: inset 0 0 3px #fb6aae; */
+  }
+
+a {
+    text-decoration: none;
+    color: rgb(27, 122, 255);
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.btn {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    background: linear-gradient(90deg, #03a9f4, #3bff72, #f441a5, #03a9f4);
+    background-size: 400%;
+    border-radius: 30px;
+    border: none;
+    z-index: 1;
+  }
+   
+  .btn:hover {
+    animation: animateBtn 8s linear infinite;
+  }
+   
+  @keyframes animateBtn {
+    0% {
+      background-position: 0%;
+    }
+    100% {
+      background-position: 400%;
+    }
+  }
+   
+  .btn:before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    bottom: -5px;
+    left: -5px;
+    z-index: -1;
+    background: linear-gradient(90deg, #03a9f4, #3bff72, #f441a5, #03a9f4);
+    background-size: 400%;
+    border-radius: 40px;
+    opacity: 0;
+    transition: .5s;
+  }
+   
+  .btn:hover:before {
+    filter: blur(20px);
+    opacity: 1;
+    animation: animateBtn 8s linear infinite;
+  }
+
+p a {
+    color: rgb(27, 122, 255);
+}
+
+p {
+    margin-top: 10px;
+    color: white;
+}
+
+@media (max-width: 400px ) {
+     .logindiv {
+      height: 100vh;
+      width: 100%;
+      border-radius: 0;
+}
+
+   .logindiv::after {
+     bottom: 1rem;
+}
+}

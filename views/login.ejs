@@ -1,0 +1,33 @@
+<% include ./partials/header.ejs %>
+ 
+   <div class="circles" id="c1"></div>
+   <div class="circles" id="c2"></div>
+   <div class="logindiv">
+     <h1>Login</h1> 
+     
+     <% if(error) { %>
+      <center><p class="error"><%= error %></p></center>
+    <% } %>
+    <% if(error) { %>
+      <center><p class="error"><%= islogin %></p></center>
+    <% } %>
+     <form action="/login" method="post">
+
+
+       <div class="field">
+         <input type="text" placeholder="Username" name="username" required>
+       </div>
+       <div class="field">
+         <input type="password" placeholder="Password" name="password" required>
+       </div>
+       <a href="#">Forget Password?</a>
+       <div class="btn">
+         <button class="btn" type="submit">Login</button>
+       </div>
+ 
+       <center><p>Don't have account? <b><a href="/register">Register</a></b></p></center>
+ 
+     </form>
+   </div>
+ 
+   <% include ./partials/footer.ejs %>

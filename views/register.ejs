@@ -1,0 +1,37 @@
+<% include ./partials/header.ejs %>
+  
+   <div class="circles" id="c1"></div>
+   <div class="circles" id="c2"></div>
+   <div class="logindiv">
+     <h1>Register</h1> 
+     <% if(again) { %>
+        <center><p class="error"><%= again %></p></center>
+      <% } %>
+
+    <% if(exist) { %>
+        <center><p class="error"><%= exist %></p></center>
+      <% } %>
+     <form action="/create" method="post">
+ 
+       <div class="field">
+         <input type="text" placeholder="Username" name="username" required>
+       </div>
+       <div class="field">
+        <input type="text" placeholder="Email" name="email" required>
+      </div>
+       <div class="field">
+         <input type="password" placeholder="Password" name="password" required>
+       </div>
+       <div class="field">
+        <input type="password" placeholder="Retype" name="retype" required>
+      </div>
+       <div class="btn">
+         <button class="btn" type="submit">Register</button>
+       </div>
+ 
+       <center><p>Have an account? <b><a href="/">Login</a></b></p></center>
+ 
+     </form>
+   </div>
+ 
+   <% include ./partials/footer.ejs %>
